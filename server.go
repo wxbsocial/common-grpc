@@ -13,7 +13,7 @@ type Server struct {
 	port string
 }
 
-func NewGRPCServer(
+func NewServer(
 	ip string, port string,
 ) *Server {
 
