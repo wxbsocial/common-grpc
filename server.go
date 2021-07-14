@@ -35,7 +35,7 @@ func (s *Server) Start() error {
 	}
 
 	server := s.NewServer()
-	s.RegisterService(server)
+	s.RegisterServer(server)
 
 	log.Printf("start to listen: %v", address)
 	if err := server.Serve(lis); err != nil {
@@ -50,6 +50,6 @@ func (s *Server) NewServer() *grpc.Server {
 	return grpc.NewServer()
 }
 
-func (s *Server) RegisterService(server *grpc.Server) {
+func (s *Server) RegisterServer(server *grpc.Server) {
 
 }
